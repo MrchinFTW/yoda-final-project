@@ -9,6 +9,8 @@ const lacture = {
   },
   workshopDate: "DATE",
   workshopTeacher: "Avi Nahoom",
+  workshopEventContant:
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, sequi culpa iure molestiae ad omnis repudiandae itaque? Vel omnis recusandae, eaque ex dicta sint mollitia velit ratione maiores quia? Enim dolorum nulla facilis sit velit modi debitis nostrum distinctio, laudantium doloremque error odit neque ipsum? Impedit, officiis excepturi. Perferendis quia id doloremque quas recusandae a maxime porro laboriosam itaque placeat dolor iure dolorem, eveniet sit provident hic molestiae perspiciatis debitis necessitatibus eos possimus molestias cum error sint? Nobis doloremque vero culpa sunt facilis, perferendis ad. Eum aut fugiat eligendi veritatis, dolorem assumenda in dolor totam pariatur soluta tenetur, aliquam saepe.",
 };
 const EventReginster = () => {
   return (
@@ -21,6 +23,7 @@ const EventReginster = () => {
       })}
       <p>{lacture.workshopDate}</p>
       <p>{lacture.workshopTeacher}</p>
+      <p>{lacture.workshopEventContant}</p>
     </div>
   );
 };

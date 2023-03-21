@@ -1,0 +1,22 @@
+hr {
+	width: 80%;
+}
+
+.home {
+	margin: 0 50px 0;
+}
+
+.lacture {
+	/* border: 1px black solid; */
+	cursor: pointer;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 1rem 0 3rem;
+}
+
+.lactureImage {
+	height: 100px;
+	border-radius: 5%;
+}

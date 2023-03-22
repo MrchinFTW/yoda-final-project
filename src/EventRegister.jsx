@@ -25,19 +25,17 @@ const EventReginster = () => {
     },
   ]);
 
+  let inputRef_name = useRef();
+  let inputRef_phoneNumber = useRef();
+  let inputRef_email = useRef();
+
   const addRegisteredList = () => {
     const newUserList = [...userList];
 
-    let nameValue = document.getElementById("name").value;
-    let phoneValue = document.getElementById("phoneNumber").value;
-    let emailValue = document.getElementById("email").value;
-
-    console.log(nameValue);
-
     const newUser = {
-      name: nameValue,
-      phoneNumber: phoneValue,
-      email: emailValue,
+      name: inputRef_name.current.value,
+      phoneNumber: inputRef_phoneNumber.current.value,
+      email: inputRef_email.current.value,
     };
 
     newUserList.push(newUser);
@@ -45,9 +43,9 @@ const EventReginster = () => {
     setUserList(newUserList);
 
     //reset input field
-    nameValue = document.getElementById("name").value = "";
-    phoneValue = document.getElementById("phoneNumber").value = "";
-    emailValue = document.getElementById("email").value = "";
+    inputRef_name.current.value = "";
+    inputRef_phoneNumber.current.value = "";
+    inputRef_email.current.value = "";
   };
 
   return (
@@ -65,15 +63,15 @@ const EventReginster = () => {
       <form>
         <label>
           Name:
-          <input type="text" id="name" />
+          <input type="text" ref={inputRef_name} />
         </label>
         <label>
           phone Number:
-          <input type="number" id="phoneNumber" />
+          <input type="number" ref={inputRef_phoneNumber} />
         </label>
         <label>
           Email:
-          <input type="email" id="email" />
+          <input type="email" ref={inputRef_email} />
         </label>
       </form>
       <button onClick={() => addRegisteredList()}>Register Now!</button>

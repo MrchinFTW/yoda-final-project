@@ -13,16 +13,17 @@ const Lacture = ({ lacture }) => {
 				console.log('click');
 			}}
 		>
-			<div>
+			<div className='imageDiv'>
 				<img
 					className='lactureImage'
 					src={lacture.workshopImage.src}
 					alt={lacture.workshopImage.alt}
 				/>
+				<span>lacturer: {lacture.workshopTeacher}</span>
 			</div>
 
 			<div>
-				<h1>{lacture.workshopTitle}</h1>
+				<h1 className='lactureTitle'>{lacture.workshopTitle}</h1>
 				<h4>{lacture.workshopHashtags}</h4>
 				<span>{lacture.workshopMiniDesc}</span>
 			</div>

@@ -1,0 +1,54 @@
+[
+	{
+		"workshopId": "000",
+		"workshopTitle": "this is why coding is fun",
+		"workshopDesc": "this is a very creepy lecture...",
+		"workshopMiniDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut commodo dui at faucibus tincidunt. Nullam convallis ipsum diam, non cursus sapien placerat in. Nulla eu ullamcorper tellus",
+		"workshopHashtags": ["creep", "shady", "strong heart"],
+		"workshopImage": {
+			"src": "https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202012/MIT-Coding-Brain-01-press_0.jpg?itok=JKoUflf8",
+			"alt": "some ALT..."
+		},
+		"workshopDate": "DATE",
+		"workshopTeacher": "Avi Nahoom"
+	},
+	{
+		"workshopId": "001",
+		"workshopTitle": "the mistory of the scope",
+		"workshopDesc": "this is a very creepy lecture...",
+		"workshopMiniDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut commodo dui at faucibus tincidunt. Nullam convallis ipsum diam, non cursus sapien placerat in. Nulla eu ullamcorper tellus",
+		"workshopHashtags": ["creep", "shady", "strong heart"],
+		"workshopImage": {
+			"src": "https://pilbox.themuse.com/image.jpg?filter=antialias&h=385&opt=1&pos=top-left&prog=1&q=keep&url=https%3A%2F%2Fcms-assets.themuse.com%2Fmedia%2Flead%2F01212022-1047259374-coding-classes_scanrail.jpg&w=700",
+			"alt": "some ALT..."
+		},
+		"workshopDate": "DATE",
+		"workshopTeacher": "Avi Nahoom"
+	},
+	{
+		"workshopId": "002",
+		"workshopTitle": "Hello World",
+		"workshopDesc": "this is a very creepy lecture...",
+		"workshopMiniDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut commodo dui at faucibus tincidunt. Nullam convallis ipsum diam, non cursus sapien placerat in. Nulla eu ullamcorper tellus",
+		"workshopHashtags": ["Hello Wrold", "Noobi", "strong heart"],
+		"workshopImage": {
+			"src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/HelloWorld.svg/1200px-HelloWorld.svg.png",
+			"alt": "some ALT..."
+		},
+		"workshopDate": "DATE",
+		"workshopTeacher": "Shimi Nahoom"
+	},
+	{
+		"workshopId": "003",
+		"workshopTitle": "React vs Angular",
+		"workshopDesc": "this is a very creepy lecture...",
+		"workshopMiniDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut commodo dui at faucibus tincidunt. Nullam convallis ipsum diam, non cursus sapien placerat in. Nulla eu ullamcorper tellus",
+		"workshopHashtags": ["React", "Angular", "strong heart"],
+		"workshopImage": {
+			"src": "https://mobilecoderz.com/blog/wp-content/uploads/2021/12/React-vs-Angular-Which-Framework-to-Choose-for-Your-App.png",
+			"alt": "some ALT..."
+		},
+		"workshopDate": "DATE",
+		"workshopTeacher": "tova Nisim"
+	}
+]

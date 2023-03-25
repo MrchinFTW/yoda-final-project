@@ -1,5 +1,5 @@
-const EventReginster = () => {
+const EventRegister = () => {
 	return <>hello from EventReginster</>;
 };
 
-export default EventReginster;
+export default EventRegister;

@@ -4,6 +4,7 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 import Box from "@mui/material/Box";
 import Fab from "@mui/material/Fab";
 import TextField from "@mui/material/TextField";
+import SendIcon from "@mui/icons-material/Send";
 
 const getCurrentDate = () => {
   const dateObj = new Date();
@@ -43,6 +44,7 @@ const EventReginster = () => {
   let inputRef_email = useRef();
 
   const addRegisteredList = () => {
+    console.log("hello");
     const newUserList = [...userList];
 
     const newUser = {
@@ -113,8 +115,12 @@ const EventReginster = () => {
           type={"email"}
           ref={inputRef_email}
         />
-        <Button variant="contained" onClick={() => addRegisteredList()}>
-          Register Now!
+        <Button
+          variant="contained"
+          endIcon={<SendIcon />}
+          onClick={() => addRegisteredList()}
+        >
+          Register Now
         </Button>
       </Box>
 

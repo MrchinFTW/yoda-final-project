@@ -44,7 +44,6 @@ const EventReginster = () => {
   let inputRef_email = useRef();
 
   const addRegisteredList = () => {
-    console.log("hello");
     const newUserList = [...userList];
 
     const newUser = {
@@ -101,19 +100,19 @@ const EventReginster = () => {
           label="Name"
           variant="outlined"
           type={"text"}
-          ref={inputRef_name}
+          inputRef={inputRef_name}
         />
         <TextField
           label="Phone"
           variant="outlined"
           type={"nuber"}
-          ref={inputRef_phoneNumber}
+          inputRef={inputRef_phoneNumber}
         />
         <TextField
           label="email"
           variant="outlined"
           type={"email"}
-          ref={inputRef_email}
+          inputRef={inputRef_email}
         />
         <Button
           variant="contained"

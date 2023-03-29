@@ -1,7 +1,6 @@
 import Header from './Header';
 
 const HomeLayout = ({ children }, props) => {
-	console.log(props);
 	return (
 		<section>
 			<Header />

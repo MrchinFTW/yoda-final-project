@@ -4,6 +4,7 @@ import Home from './Home';
 import Login from './Login';
 import EventRegister from './EventRegister';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import WorkshopAdminPage from './Pages/WorkshopAdminPage';
 
 const queryClient = new QueryClient();
 
@@ -14,7 +15,8 @@ function App() {
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/login' element={<Login />} />
-					<Route path='/event' element={<EventRegister />} />
+					<Route path='/event/:id' element={<EventRegister />} />
+					<Route path='/add-event' element={<WorkshopAdminPage />} />
 				</Routes>
 			</div>
 		</QueryClientProvider>

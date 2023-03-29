@@ -18,7 +18,7 @@ const Home = () => {
 		);
 	}
 	return (
-		<HomeLayout abc={'hello'}>
+		<HomeLayout>
 			{lectures.map((lecture) => (
 				<>
 					<Lacture lecture={lecture} key={lecture.workshopId} />

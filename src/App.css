@@ -1,18 +1,23 @@
 .workShop__tags {
-  padding: 8px;
-  margin: 4px;
-  background-color: wheat;
+	padding: 8px;
+	margin: 4px;
+	background-color: wheat;
 }
 
 .workShop__detials {
-  padding: 8px;
-  margin: 4px;
+	padding: 8px;
+	margin: 4px;
 }
 
 .input-field {
-  /* border: 2px red solid; */
-  padding-top: 18px;
-  gap: 10px;
-  display: flex;
-  justify-content: center;
+	/* border: 2px red solid; */
+	padding-top: 18px;
+	gap: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+.footerDiv {
+	display: flex;
+	justify-content: center;
 }

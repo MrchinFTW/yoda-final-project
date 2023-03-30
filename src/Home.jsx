@@ -1,7 +1,6 @@
 import './Home.css';
 import Lacture from './Components/Lecture';
 import useWorkshop from './Hooks/useWorkshop';
-import HomeLayout from './Components/HomeLayout';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 
@@ -18,14 +17,14 @@ const Home = () => {
 		);
 	}
 	return (
-		<HomeLayout>
+		<>
 			{lectures.map((lecture) => (
 				<>
 					<Lacture lecture={lecture} key={lecture.workshopId} />
 					<hr />
 				</>
 			))}
-		</HomeLayout>
+		</>
 	);
 };
 

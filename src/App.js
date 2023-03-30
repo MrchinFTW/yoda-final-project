@@ -5,6 +5,7 @@ import Login from './Login';
 import EventRegister from './EventRegister';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import WorkshopAdminPage from './Pages/WorkshopAdminPage';
+import HomeLayout from './Components/HomeLayout';
 
 const queryClient = new QueryClient();
 
@@ -12,12 +13,14 @@ function App() {
 	return (
 		<QueryClientProvider client={queryClient}>
 			<div className='App'>
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/login' element={<Login />} />
-					<Route path='/event/:id' element={<EventRegister />} />
-					<Route path='/add-event' element={<WorkshopAdminPage />} />
-				</Routes>
+				<HomeLayout>
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/login' element={<Login />} />
+						<Route path='/event/:id' element={<EventRegister />} />
+						<Route path='/add-event' element={<WorkshopAdminPage />} />
+					</Routes>
+				</HomeLayout>
 			</div>
 		</QueryClientProvider>
 	);

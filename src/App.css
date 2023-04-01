@@ -1,7 +1,7 @@
 .workShop__tags {
   padding: 8px;
   margin: 4px;
-  background-color: wheat;
+  background-color: #f7e1b8;
 }
 
 .workShop__detials {
@@ -15,4 +15,18 @@
   gap: 10px;
   display: flex;
   justify-content: center;
+}
+
+.dateAndTeacher {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.dateAndTeacher div {
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 1rem;
+  background-color: lightblue;
 }

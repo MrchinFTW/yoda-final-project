@@ -7,11 +7,12 @@ import Box from '@mui/material/Box';
 const Home = () => {
 	const { data: lectures, isLoading, isError } = useWorkshop();
 	if (isError) {
-		return <h1>Error</h1>;
+		return <h1>An error has accured</h1>;
 	}
 	if (isLoading) {
 		return (
-			<Box sx={{ display: 'flex', justifyContent: 'center' }}>
+			<Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+				loading...
 				<CircularProgress />
 			</Box>
 		);

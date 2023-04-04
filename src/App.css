@@ -1,23 +1,57 @@
+.workshop_Main {
+  margin: 0 auto 0;
+  display: flex;
+  width: 85%;
+  min-width: 15%;
+}
+.workshop_Img {
+  border: 2px black solid;
+  /* padding: 3rem; */
+  margin: 3rem;
+  width: 340px;
+  height: 191px;
+}
+
 .workShop__tags {
-	padding: 8px;
-	margin: 4px;
-	background-color: wheat;
+  padding: 8px;
+  margin: 4px;
+  background-color: #f7e1b8;
 }
 
 .workShop__detials {
-	padding: 8px;
-	margin: 4px;
+  padding: 8px;
+  margin: 4px;
 }
 
 .input-field {
-	/* border: 2px red solid; */
-	padding-top: 18px;
-	gap: 10px;
-	display: flex;
-	justify-content: center;
+  /* border: 2px red solid; */
+  padding-top: 18px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .footerDiv {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
+}
+
+.dateAndTeacher {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.dateAndTeacher div {
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 1rem;
+  background-color: lightblue;
+}
+
+.userList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

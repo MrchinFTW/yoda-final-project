@@ -1,3 +1,17 @@
+.workshop_Main {
+  margin: 0 auto 0;
+  display: flex;
+  width: 85%;
+  min-width: 15%;
+}
+.workshop_Img {
+  border: 2px black solid;
+  /* padding: 3rem; */
+  margin: 3rem;
+  width: 340px;
+  height: 191px;
+}
+
 .workShop__tags {
   padding: 8px;
   margin: 4px;

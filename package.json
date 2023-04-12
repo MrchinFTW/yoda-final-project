@@ -6,6 +6,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/roboto": "^4.5.8",
+    "@hookform/resolvers": "^3.0.1",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.14",
     "@testing-library/jest-dom": "^5.16.5",
@@ -17,7 +18,8 @@
     "react-query": "^3.39.3",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,6 +46,6 @@
     ]
   },
   "devDependencies": {
-    "react-hook-form": "^7.43.7"
+    "react-hook-form": "^7.43.9"
   }
 }

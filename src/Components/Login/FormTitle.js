@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import classes from './UI/FormTitle.module.css'
 
-const FormTitle = ({ children, subtitle }) => {
+const FormTitle = ({ subtitle, children }) => {
 
     return <>
         <Box className={classes.container}>

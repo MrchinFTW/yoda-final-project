@@ -10,14 +10,14 @@ import { theme } from './UI/theme'
 
 
 function SignupForm() {
-
-
+    const subtitle = "Please fill this form to create an account!"
+    const title = " Sign up"
     return (
         <>
             <ThemeProvider theme={theme}>
                 <FormContainer>
-                    <FormTitle subtitle="Please fill this form to create an account!">
-                        Sign up
+                    <FormTitle subtitle={subtitle}>
+                        {title}
                     </FormTitle>
                     <FormInput />
                 </FormContainer>

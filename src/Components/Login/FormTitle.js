@@ -5,10 +5,10 @@ const FormTitle = ({ children, subtitle }) => {
 
     return <>
         <Box className={classes.container}>
-            <Typography component="h1" variant="h4" className={classes.title}>
+            <Typography component="h1" variant="h4">
                 {children}
             </Typography>
-            <Typography variant="body1" className={classes.subtitle}>{subtitle}</Typography>
+            <Typography variant="body1" color="secondary">{subtitle}</Typography>
         </Box >
     </>
 }

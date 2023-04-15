@@ -1,66 +1,31 @@
-import React, { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import {
-    Box,
-    Checkbox,
-    Link,
-    FormControlLabel,
-    FormHelperText,
-    Grid,
-    IconButton,
-    InputAdornment,
-    TextField,
-} from '@mui/material'
+import React from 'react'
+import { Box, Checkbox, FormControlLabel, FormHelperText, Grid, IconButton, InputAdornment, TextField, Link } from '@mui/material'
 import { Visibility, VisibilityOff } from '@mui/icons-material'
 import FormBtn from './FormBtn'
-
-
+import useFormInput from './useFormInput'
 
 const FormInput = () => {
-    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm()
+    const {
+        register,
+        handleSubmit,
+        errors,
+        showPassword,
+        showConfirmPassword,
+        checked,
+        requiredMsg,
+        password,
+        handleClickShowPassword,
+        handleMouseDownPassword,
+        handleClickShowConfirmPassword,
+        handleMouseDownConfirmPassword,
+        handleCheckbox,
+        onSubmit,
+        onError
+    } = useFormInput()
 
-    const [showPassword, setShowPassword] = useState(false)
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-    const [checked, setChecked] = useState(false)
-
-    const requiredMsg = "This field is required."
-    const password = watch("password")
-
-
-    const handleClickShowPassword = () => {
-        setShowPassword(!showPassword)
-    }
-
-    const handleMouseDownPassword = (event) => {
-        event.preventDefault()
-    }
-
-
-    const handleClickShowConfirmPassword = () => {
-        setShowConfirmPassword(!showConfirmPassword)
-    }
-
-    const handleMouseDownConfirmPassword = (event) => {
-        event.preventDefault()
-    }
-
-    const handleCheckbox = (event) => {
-        setChecked(event.target.checked)
-    }
-
-
-    const onSignup = (data) => {
-        console.log(data)
-        reset()
-
-    }
-
-    const onError = () => {
-        console.log('error')
-    }
 
     return <>
-        <Box component="form" onSubmit={handleSubmit(onSignup, onError)}>
+        <Box component="form" onSubmit={handleSubmit(onSubmit, onError)}>
             <Grid container spacing={3}>
                 <Grid item xs={12} sm={6}>
                     <TextField

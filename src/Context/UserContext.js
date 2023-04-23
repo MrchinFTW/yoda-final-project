@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react"
+import React, { createContext, useContext, useState } from "react"
 
 const UserContext = createContext()
 
@@ -20,7 +20,7 @@ export const UserProvider = ({ children }) => {
 
 const useUserContext = () => {
 
-    const { isLoggedin, setIsLoggedin, isLoggingin, setIsLoggingin, userData, setUserData } = useContext(UserContext)
+    const { isLoggedin, setIsLoggedin, isLoggingin, setIsLoggingin, setUserData } = useContext(UserContext)
 
     // This is mock, login will be done with an exturnal lib. 
     const login = () => {

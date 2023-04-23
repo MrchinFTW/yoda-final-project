@@ -1,5 +1,5 @@
 import { Container, Paper, CssBaseline } from "@mui/material"
-import classes from './UI/FormContainer.module.css'
+import classes from '../Styles/FormContainer.module.css'
 
 const FormContainer = ({ children }) => {
     return <>

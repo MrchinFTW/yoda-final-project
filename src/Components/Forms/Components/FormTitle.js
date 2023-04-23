@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import classes from './UI/FormTitle.module.css'
+import classes from '../Styles/FormTitle.module.css'
 
 const FormTitle = ({ subtitle, children }) => {
 

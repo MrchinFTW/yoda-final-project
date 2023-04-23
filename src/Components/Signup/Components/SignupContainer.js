@@ -1,17 +1,15 @@
 import React from 'react'
 
-import FormTitle from './FormTitle'
-import FormContainer from './FormContainer'
-import FormInput from './FormInput'
+import FormTitle from '../../Forms/Components/FormTitle'
+import FormContainer from '../../Forms/Components/FormContainer'
+import SignupForm from './SignupForm'
 import { ThemeProvider } from '@mui/material/styles'
-import { theme } from './UI/theme'
+import { theme } from '../../Forms/Styles/theme'
 
 
-
-
-function SignupForm() {
+function SignupContainer() {
     const subtitle = "Please fill this form to create an account!"
-    const title = " Sign up"
+    const title = "Sign up"
     return (
         <>
             <ThemeProvider theme={theme}>
@@ -19,11 +17,11 @@ function SignupForm() {
                     <FormTitle subtitle={subtitle}>
                         {title}
                     </FormTitle>
-                    <FormInput />
+                    <SignupForm />
                 </FormContainer>
             </ThemeProvider>
         </>
     )
 }
 
-export default SignupForm
+export default SignupContainer

@@ -6,8 +6,8 @@ import EventRegister from './EventRegister'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import WorkshopAdminPage from './Pages/WorkshopAdminPage'
 import HomeLayout from './Components/HomeLayout'
-import { UserProvider } from './Components/Login/UserContext'
-import SignupForm from './Signup'
+import { UserProvider } from './Context/UserContext'
+import SignupForm from './Pages/Signup'
 
 
 const queryClient = new QueryClient()

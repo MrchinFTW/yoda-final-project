@@ -1,10 +1,11 @@
 import React from 'react'
 import { Box, Checkbox, FormControlLabel, FormHelperText, Grid, IconButton, InputAdornment, TextField, Link } from '@mui/material'
 import { Visibility, VisibilityOff } from '@mui/icons-material'
-import FormBtn from './FormBtn'
-import useFormInput from './useFormInput'
+import FormBtn from '../../Forms/Components/FormBtn'
+import useFormInput from '../Hooks/useFormInput'
+import { validation } from '../../Forms/Components/FormValidation'
 
-const FormInput = () => {
+const SignupForm = () => {
     const {
         register,
         handleSubmit,
@@ -12,7 +13,6 @@ const FormInput = () => {
         showPassword,
         showConfirmPassword,
         checked,
-        requiredMsg,
         password,
         handleClickShowPassword,
         handleMouseDownPassword,
@@ -22,6 +22,7 @@ const FormInput = () => {
         onSubmit,
         onError
     } = useFormInput()
+
 
 
     return <>
@@ -37,12 +38,11 @@ const FormInput = () => {
                         autoComplete="given-name"
                         variant="standard"
                         {...register("firstName", {
-                            required: requiredMsg,
+                            required: validation.firstName.required,
                             minLength: {
-                                value: 2,
-                                message: "Name too short."
+                                value: validation.firstName.minLength.value,
+                                message: validation.firstName.minLength.message
                             },
-                            maxLength: 20
                         }
                         )}
                         error={errors.firstName ? true : false}
@@ -60,12 +60,11 @@ const FormInput = () => {
                         autoComplete="family-name"
                         variant="standard"
                         {...register("lastName", {
-                            required: requiredMsg,
+                            required: validation.lastName.required,
                             minLength: {
-                                value: 2,
-                                message: "Last name too short."
+                                value: validation.lastName.minLength.value,
+                                message: validation.lastName.minLength.message
                             },
-                            maxLength: 20
                         }
                         )}
                         error={errors.lastName ? true : false}
@@ -83,10 +82,10 @@ const FormInput = () => {
                         autoComplete="email address"
                         variant="standard"
                         {...register("email", {
-                            required: requiredMsg,
+                            required: validation.email.required,
                             pattern: {
-                                value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-                                message: 'Please enter a valid email address'
+                                value: validation.email.pattern.value,
+                                message: validation.email.pattern.message
                             }
                         })}
                         error={errors.email ? true : false}
@@ -104,10 +103,10 @@ const FormInput = () => {
                         type="number"
                         variant="standard"
                         {...register("phoneNumber", {
-                            required: requiredMsg,
+                            required: validation.phoneNumber.required,
                             minLength: {
-                                value: 10,
-                                message: "Please enter a valid phone number"
+                                value: validation.phoneNumber.minLength.value,
+                                message: validation.phoneNumber.minLength.message
                             }
                         }
                         )}
@@ -125,7 +124,7 @@ const FormInput = () => {
                         fullWidth
                         variant="standard"
                         {...register("city", {
-                            required: requiredMsg
+                            required: validation.city.required
                         })}
                         error={errors.city ? true : false}
                         helperText={errors.city?.message}
@@ -155,14 +154,14 @@ const FormInput = () => {
                             )
                         }}
                         {...register("password", {
-                            required: requiredMsg,
+                            required: validation.password.required,
                             pattern: {
-                                value: /^(?=.*[a-zA-Z])(?=.*\d).+$/,
-                                message: "Password must include letters and numbers."
+                                value: validation.password.pattern.value,
+                                message: validation.password.pattern.message
                             },
                             minLength: {
-                                value: 6,
-                                message: "Password must be at least 6 characters"
+                                value: validation.password.minLength.value,
+                                message: validation.password.minLength.message
                             }
                         })}
                         error={errors.password ? true : false}
@@ -193,10 +192,10 @@ const FormInput = () => {
                             )
                         }}
                         {...register("confirmPassword", {
-                            required: requiredMsg,
+                            required: validation.confirmPassword.required,
                             validate: {
                                 value: (value) =>
-                                    value === password || "Passwords do not match"
+                                    value === password || validation.confirmPassword.validate
                             },
                         })}
                         error={errors.confirmPassword ? true : false}
@@ -211,7 +210,7 @@ const FormInput = () => {
                         label="Agree to terms and conditions"   {...register("agreeToTerms", { required: true })}
 
                     />
-                    {errors.agreeToTerms && <FormHelperText error >You must agree to the turms & coditions </FormHelperText>}
+                    {errors.agreeToTerms && <FormHelperText error >{validation.agreeToTerms.message} </FormHelperText>}
 
                 </Grid>
                 <FormBtn>Sign up</FormBtn>
@@ -227,4 +226,4 @@ const FormInput = () => {
     </>
 }
 
-export default FormInput
+export default SignupForm

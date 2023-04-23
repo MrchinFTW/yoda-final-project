@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 
+
 const useFormInput = () => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm()
 
@@ -8,7 +9,6 @@ const useFormInput = () => {
     const [showConfirmPassword, setShowConfirmPassword] = useState(false)
     const [checked, setChecked] = useState(false)
 
-    const requiredMsg = "This field is required."
     const password = watch("password")
 
     const handleClickShowPassword = () => {
@@ -49,7 +49,6 @@ const useFormInput = () => {
         showPassword,
         showConfirmPassword,
         checked,
-        requiredMsg,
         password,
         handleClickShowPassword,
         handleMouseDownPassword,

@@ -1,13 +1,16 @@
 import React from "react"
-import { Box, Checkbox, FormControlLabel, FormHelperText, Grid, IconButton, InputAdornment, TextField, Link } from '@mui/material'
+import { Box, Grid, IconButton, InputAdornment, TextField, Link } from '@mui/material'
 import { Visibility, VisibilityOff } from '@mui/icons-material'
 import useFormInput from '../../../Signup/Hooks/useFormInput'
 import FormBtn from "../../Components/FormBtn"
 import { validation } from "../../Components/FormValidation"
+import useUserContext from "../../../../Context/UserContext"
+
 
 
 
 const LoginForm = () => {
+
 
     const { register, handleSubmit, errors, showPassword, handleClickShowPassword, onSubmit,
         onError, handleMouseDownPassword, } = useFormInput()
@@ -78,7 +81,7 @@ const LoginForm = () => {
                     <FormBtn>Log in</FormBtn>
                     <Grid container justifyContent="flex-end">
                         <Grid item sx={{ mt: 1 }}>
-                            <Link href="#" variant="body2">
+                            <Link href="/login" variant="body2">
                                 Don't have an account? Sign up
                             </Link>
                         </Grid>

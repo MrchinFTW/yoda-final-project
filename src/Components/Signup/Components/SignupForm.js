@@ -5,6 +5,7 @@ import FormBtn from '../../Forms/Components/FormBtn'
 import useFormInput from '../Hooks/useFormInput'
 import { validation } from '../../Forms/Components/FormValidation'
 
+
 const SignupForm = () => {
     const {
         register,
@@ -22,6 +23,7 @@ const SignupForm = () => {
         onSubmit,
         onError
     } = useFormInput()
+
 
 
 
@@ -216,7 +218,7 @@ const SignupForm = () => {
                 <FormBtn>Sign up</FormBtn>
                 <Grid container justifyContent="flex-end">
                     <Grid item sx={{ mt: 1 }}>
-                        <Link href="#" variant="body2">
+                        <Link href="/signup" variant="body2">
                             Already have an account? Sign in
                         </Link>
                     </Grid>

@@ -95,43 +95,6 @@ const SignupForm = () => {
                     />
                 </Grid>
 
-                <Grid item xs={12} sm={6}>
-                    <TextField
-                        noValidate
-                        id="phoneNumber"
-                        name="phoneNumber"
-                        label="Phone number"
-                        fullWidth
-                        type="number"
-                        variant="standard"
-                        {...register("phoneNumber", {
-                            required: validation.phoneNumber.required,
-                            minLength: {
-                                value: validation.phoneNumber.minLength.value,
-                                message: validation.phoneNumber.minLength.message
-                            }
-                        }
-                        )}
-                        error={errors.phoneNumber ? true : false}
-                        helperText={errors.phoneNumber?.message}
-                    />
-                </Grid>
-
-                <Grid item xs={12} sm={6}>
-                    <TextField
-                        noValidate
-                        id="city"
-                        name="city"
-                        label="City"
-                        fullWidth
-                        variant="standard"
-                        {...register("city", {
-                            required: validation.city.required
-                        })}
-                        error={errors.city ? true : false}
-                        helperText={errors.city?.message}
-                    />
-                </Grid>
 
                 <Grid item xs={12}>
                     <TextField

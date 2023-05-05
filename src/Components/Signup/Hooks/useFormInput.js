@@ -32,23 +32,31 @@ const useFormInput = () => {
     }
 
     const onSubmit = (data) => {
-         fetch('http://localhost:999/signup', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    }).then(response => {
-        if (response.status === 409) {
-            setError("email", {
-                type: "manual",
-                message: "Email already exists."
-            })
-        } else {
-            console.log(response)
-            reset()
-        }
-    })
+        const signupUrl = 'http://localhost:999/signup'
+
+        fetch(signupUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+
+            body: JSON.stringify(data)
+
+        }).then(response => {
+
+            if (response.status === 409) {
+
+                setError("email", {
+                    type: "manual",
+                    message: "Email already exists."
+
+                })
+            } else {
+                
+                console.log(response)
+                reset()
+            }
+        })
     }
 
     const onError = () => {

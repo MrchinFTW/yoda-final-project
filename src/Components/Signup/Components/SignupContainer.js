@@ -8,13 +8,12 @@ import { theme } from '../../Forms/Styles/theme'
 
 
 function SignupContainer() {
-    const subtitle = "Please fill this form to create an account!"
     const title = "Sign up"
     return (
         <>
             <ThemeProvider theme={theme}>
                 <FormContainer>
-                    <FormTitle subtitle={subtitle}>
+                    <FormTitle>
                         {title}
                     </FormTitle>
                     <SignupForm />

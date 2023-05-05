@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form'
 
 
 const useFormInput = () => {
-    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm()
+    const { register, handleSubmit, watch, reset, formState: { errors }, setError } = useForm()
 
     const [showPassword, setShowPassword] = useState(false)
     const [showConfirmPassword, setShowConfirmPassword] = useState(false)
@@ -32,8 +32,23 @@ const useFormInput = () => {
     }
 
     const onSubmit = (data) => {
-        console.log(data)
-        reset()
+         fetch('http://localhost:999/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }).then(response => {
+        if (response.status === 409) {
+            setError("email", {
+                type: "manual",
+                message: "Email already exists."
+            })
+        } else {
+            console.log(response)
+            reset()
+        }
+    })
     }
 
     const onError = () => {

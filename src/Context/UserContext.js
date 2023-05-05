@@ -26,7 +26,7 @@ const useUserContext = () => {
     const login = () => {
         if (!isLoggedin) {
             setIsLoggingin(true)
-
+            console.log('login')
 
             // To simulate the time that the login takes.
             setTimeout(() => {

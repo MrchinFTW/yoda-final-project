@@ -11,15 +11,14 @@ import useUserContext from "../../../../Context/UserContext"
 
 const LoginForm = () => {
 
-
-    const { register, handleSubmit, errors, showPassword, handleClickShowPassword, onSubmit,
+const {login} = useUserContext()
+    const { register, handleSubmit, errors, showPassword, handleClickShowPassword,
         onError, handleMouseDownPassword, } = useFormInput()
 
     return (
         <>
-            <Box component="form" onSubmit={handleSubmit(onSubmit, onError)}>
+            <Box component="form" onSubmit={handleSubmit(login, onError)}>
                 <Grid container spacing={3}>
-
                     <Grid item xs={12}>
                         <TextField
                             noValidate

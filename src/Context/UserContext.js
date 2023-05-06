@@ -26,27 +26,9 @@ const useUserContext = () => {
     const { isLoggedin, setIsLoggedin, isLoggingin, setIsLoggingin, setUserData, errors, setError } = useContext(UserContext)
  
 
-    const login = (data) => {
+    const login = () => {
 
-        const loginUrl = 'http://localhost:999/login'
-
-        axios.post(loginUrl, { email: data.email, password: data.password })
-            .then(response => {
-
-                if (response.status === 401) {
-
-                    setError("email", {
-                        type: "manual",
-                        message: "Sorry, we couldn't find your email address. Please sign up to create an account."
-
-                    })
-                }
-
-                console.log(response + 'Login successful!')
-            })
-            .catch(error => {
-                console.error('Error logging in: ', error)
-            })
+      
     }
 
 

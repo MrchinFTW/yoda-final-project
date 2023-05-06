@@ -1,6 +1,21 @@
-.container {
+
+  .container {
   margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* font-weight: thin !important; */
+}
+h1 {
+  letter-spacing: 3px;
+  font-size: 3rem !important;
+  font-weight: 500 !important;
+}
+img {
+
+  height: 25px;
+  width: 105px;
+  margin: 0;
+  position: relative;
+  top: -2px;
 }

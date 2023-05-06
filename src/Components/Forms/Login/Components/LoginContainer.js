@@ -14,7 +14,7 @@ const LoginContainer = () => {
     return <>
         <ThemeProvider theme={theme}>
             <FormContainer>
-                <FormTitle subtitle={subtitle}>
+                <FormTitle >
                     {title}
                 </FormTitle >
                 <LoginForm />

@@ -171,7 +171,9 @@ const SignupForm = () => {
                     <FormControlLabel
                         control={<Checkbox name="agreeToTerms" checked={checked}
                             onChange={handleCheckbox}
-                            inputProps={{ 'aria-label': 'controlled' }} />}
+                            inputProps={{ 'aria-label': 'controlled' }}
+                            size="small" 
+                          />}
                         label="Agree to terms and conditions"   {...register("agreeToTerms", { required: true })}
 
                     />
@@ -181,7 +183,7 @@ const SignupForm = () => {
                 <FormBtn>Sign up</FormBtn>
                 <Grid container justifyContent="flex-end">
                     <Grid item sx={{ mt: 1 }}>
-                        <Link href="/signup" variant="body2">
+                        <Link href="/login" variant="body2">
                             Already have an account? Sign in
                         </Link>
                     </Grid>

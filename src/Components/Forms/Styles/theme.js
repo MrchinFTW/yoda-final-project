@@ -1,5 +1,8 @@
 import { createTheme } from '@mui/material/styles'
 import { grey } from '@mui/material/colors'
+import 'typeface-saira-condensed'
+
+
 
 export const theme = createTheme({
     palette: {
@@ -12,9 +15,11 @@ export const theme = createTheme({
         },
     },
     typography: {
-        h4: {
-            fontWeight: 600
-        }
+             fontFamily: [
+            'Saira Condensed',
+            'sans-serif',
+        ].join(','),
+
     },
 
 

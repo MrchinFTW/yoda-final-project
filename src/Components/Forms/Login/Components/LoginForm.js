@@ -23,7 +23,7 @@ const LoginForm = () => {
                             noValidate
                             id="email"
                             name="email"
-                            label="Email address"
+                            label="Your e-mail address"
                             fullWidth
                             autoComplete="email address"
                             variant="standard"

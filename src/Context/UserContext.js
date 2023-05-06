@@ -1,8 +1,11 @@
 import React, { createContext, useContext, useState } from "react"
+import axios from "axios"
+import { useForm } from 'react-hook-form'
 
 const UserContext = createContext()
 
 export const UserProvider = ({ children }) => {
+    const { formState: { errors }, setError } = useForm()
     const [isLoggedin, setIsLoggedin] = useState(false)
     const [isLoggingin, setIsLoggingin] = useState(false)
     const [userData, setUserData] = useState({
@@ -10,7 +13,7 @@ export const UserProvider = ({ children }) => {
         lastName: null
     })
 
-    return <UserContext.Provider value={{ isLoggedin, setIsLoggedin, userData, setUserData, isLoggingin, setIsLoggingin }}>
+    return <UserContext.Provider value={{ isLoggedin, setIsLoggedin, userData, setUserData, isLoggingin, setIsLoggingin, errors, setError}}>
         {children}
     </UserContext.Provider>
 
@@ -20,21 +23,30 @@ export const UserProvider = ({ children }) => {
 
 const useUserContext = () => {
 
-    const { isLoggedin, setIsLoggedin, isLoggingin, setIsLoggingin, setUserData } = useContext(UserContext)
+    const { isLoggedin, setIsLoggedin, isLoggingin, setIsLoggingin, setUserData, errors, setError } = useContext(UserContext)
+ 
 
-    // This is mock, login will be done with an exturnal lib. 
-    const login = () => {
-        if (!isLoggedin) {
-            setIsLoggingin(true)
-            console.log('login')
+    const login = (data) => {
 
-            // To simulate the time that the login takes.
-            setTimeout(() => {
-                setIsLoggedin(true)
-                setIsLoggingin(false)
+        const loginUrl = 'http://localhost:999/login'
 
-            }, 3000)
-        }
+        axios.post(loginUrl, { email: data.email, password: data.password })
+            .then(response => {
+
+                if (response.status === 401) {
+
+                    setError("email", {
+                        type: "manual",
+                        message: "Sorry, we couldn't find your email address. Please sign up to create an account."
+
+                    })
+                }
+
+                console.log(response + 'Login successful!')
+            })
+            .catch(error => {
+                console.error('Error logging in: ', error)
+            })
     }
 
 
@@ -62,6 +74,7 @@ const useUserContext = () => {
 
 
     return {
+        errors,
         login,
         logout,
         userInfo,

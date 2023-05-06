@@ -1,24 +1,23 @@
 import React from "react"
 import { Box, Grid, IconButton, InputAdornment, TextField, Link } from '@mui/material'
 import { Visibility, VisibilityOff } from '@mui/icons-material'
-import useFormInput from '../../../Signup/Hooks/useFormInput'
 import FormBtn from "../../Components/FormBtn"
 import { validation } from "../../Components/FormValidation"
-import useUserContext from "../../../../Context/UserContext"
+import useLoginForm from "../Hooks/useLoginForm"
 
 
 
 
 const LoginForm = () => {
 
-const {login} = useUserContext()
-    const { register, handleSubmit, errors, showPassword, handleClickShowPassword,
-        onError, handleMouseDownPassword, } = useFormInput()
+    const { register, handleSubmit, errors, showPassword, onSubmit,
+        onError, handleMouseDownPassword, handleClickShowPassword } = useLoginForm()
 
     return (
         <>
-            <Box component="form" onSubmit={handleSubmit(login, onError)}>
+            <Box component="form" onSubmit={handleSubmit(onSubmit, onError)}>
                 <Grid container spacing={3}>
+
                     <Grid item xs={12}>
                         <TextField
                             noValidate
@@ -33,7 +32,8 @@ const {login} = useUserContext()
                                 pattern: {
                                     value: validation.email.pattern.value,
                                     message: validation.email.pattern.message
-                                }
+                                },
+                                notFound: validation.email.notFound
                             })}
                             error={errors.email ? true : false}
                             helperText={errors.email?.message}
@@ -64,14 +64,7 @@ const {login} = useUserContext()
                             }}
                             {...register("password", {
                                 required: validation.password.required,
-                                pattern: {
-                                    value: validation.password.pattern.value,
-                                    message: validation.password.pattern.message
-                                },
-                                minLength: {
-                                    value: validation.password.minLength.value,
-                                    message: validation.password.minLength.message
-                                }
+                                wrongPassword: validation.password.wrongPassword
                             })}
                             error={errors.password ? true : false}
                             helperText={errors.password?.message}

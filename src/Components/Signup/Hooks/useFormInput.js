@@ -52,7 +52,7 @@ const useFormInput = () => {
 
                 })
             } else {
-                
+
                 console.log(response)
                 reset()
             }

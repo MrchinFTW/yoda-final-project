@@ -15,9 +15,8 @@ export const theme = createTheme({
         },
     },
     typography: {
-             fontFamily: [
-            'Saira Condensed',
-            'sans-serif',
+        fontFamily: [
+            'Roboto Flex', "sans-serif",
         ].join(','),
 
     },

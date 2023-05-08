@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import classes from '../Styles/FormTitle.module.css'
-import mostacheImg from '../Assets/mostache-img.png'
+
 
 
 const FormTitle = ({ children }) => {
@@ -10,7 +10,7 @@ const FormTitle = ({ children }) => {
             <Typography component="h1" variant="h4">
                 {children}
             </Typography>
-            <img src={mostacheImg} alt= "mostache logo" />
+            {/* <img src={mostacheImg} alt= "mostache logo" /> */}
         </Box >
     </>
 }

@@ -25,8 +25,10 @@ const useLoginForm = () => {
     const onSubmit = (data) => {
         axios.post(loginUrl, { email: data.email, password: data.password })
             .then(response => {
-                console.log('welcome', data.firstName)
-                userInfo(data.firstName, data.lastName)
+                const { token, user } = response.data
+                localStorage.setItem('jwt-token', token)
+                console.log('welcome', user.firstName)
+                userInfo(user.firstName, user.lastName)
             })
             .catch(error => {
                 if (error.response && error.response.status === 401) {

@@ -43,7 +43,7 @@ export const validation = {
             mesage: "Password must be at least 6 characters",
             value: 6
         },
-        wrongPassword: "Oops, wrong password, try again."
+        wrongPassword: "Oops, wrong password please try again."
     },
     confirmPassword: {
         required: "This field is required",

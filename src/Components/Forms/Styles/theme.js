@@ -16,10 +16,11 @@ export const theme = createTheme({
     },
     typography: {
         fontFamily: [
-            'Roboto Flex', "sans-serif",
+            'Syne', "sans-serif",
         ].join(','),
-
+        fontSize: 13
     },
+
 
 
 })

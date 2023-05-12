@@ -1,9 +1,9 @@
-import '../Styles/FormCard.module.css'
+import classes from '../Styles/FormImg.module.css'
 
 const FormImg = (props) => {
 
     return <>
-        <img src={props.src} alt={props.alt} className={props.className} />
+        <img src={props.src} alt={props.alt} className={classes.img} />
     </>
 }
 

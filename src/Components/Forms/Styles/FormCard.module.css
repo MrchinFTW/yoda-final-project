@@ -1,4 +1,19 @@
-Card {
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* z-index: 1; */
+  width: 850px;
+  height: 550px;
+  /* background: hsl(0, 0, 100); */
+
+  border-radius: 10px;
+  overflow: hidden;
   display: flex;
   align-items: center;
+  /* -webkit-box-shadow: 0 35px 20px #777 !important; */
+  /* -moz-box-shadow: 0 35px 20px #777 !important; */
+  /* box-shadow: 0 35px 20px #777 !important; */
+
 }

@@ -71,7 +71,7 @@ const LoginForm = () => {
                         />
                     </Grid>
                     <FormBtn>Log in</FormBtn>
-                    <Grid container justifyContent="flex-end">
+                    <Grid container justifyContent="center">
                         <Grid item sx={{ mt: 1 }}>
                             <Link href="/login" variant="body2">
                                 Don't have an account? Sign up

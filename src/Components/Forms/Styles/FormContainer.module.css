@@ -1,5 +1,11 @@
+.container {
+  width: 100%;
+}
 .paper {
   padding: 2rem;
-  margin: 2rem;
-  flex: 1;
+  /* padding-top: 0; */
+  width: 400px;
+  height: 500px;
+  box-sizing: border-box;
+  /* margin: 2rem; */
 }

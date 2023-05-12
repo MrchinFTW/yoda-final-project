@@ -4,6 +4,8 @@ import { Visibility, VisibilityOff } from '@mui/icons-material'
 import FormBtn from '../../Forms/Components/FormBtn'
 import useFormInput from '../Hooks/useFormInput'
 import { validation } from '../../Forms/Components/FormValidation'
+import classes from "../Styles/SignupForm.module.css"
+
 
 
 
@@ -30,11 +32,12 @@ const SignupForm = () => {
 
     return <>
         <Box component="form" onSubmit={handleSubmit(onSubmit, onError)}>
-            <Grid container spacing={3}>
-                <Grid item xs={12} sm={6}>
+            <Grid container spacing={2} >
+                <Grid item xs={12} sm={6} >
                     <TextField
                         noValidate
                         id="firstName"
+
                         name="firstName"
                         label="First name"
                         fullWidth
@@ -56,6 +59,7 @@ const SignupForm = () => {
                 <Grid item xs={12} sm={6}>
                     <TextField
                         noValidate
+
                         id="lastName"
                         name="lastName"
                         label="Last name"
@@ -79,6 +83,7 @@ const SignupForm = () => {
                     <TextField
                         noValidate
                         id="email"
+
                         name="email"
                         label="Email address"
                         fullWidth
@@ -99,6 +104,7 @@ const SignupForm = () => {
 
                 <Grid item xs={12}>
                     <TextField
+
                         id="password"
                         name="password"
                         label="Set password"
@@ -137,6 +143,7 @@ const SignupForm = () => {
 
                 <Grid item xs={12}>
                     <TextField
+
                         id="confirmPassword"
                         name="confirmPassword"
                         label="Confirm password"
@@ -168,21 +175,21 @@ const SignupForm = () => {
                         helperText={errors.confirmPassword?.message}
                     />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} className={classes.checkbox}>
                     <FormControlLabel
                         control={<Checkbox name="agreeToTerms" checked={checked}
                             onChange={handleCheckbox}
                             inputProps={{ 'aria-label': 'controlled' }}
-                            size="small" 
-                          />}
-                        label="Agree to terms and conditions"   {...register("agreeToTerms", { required: true })}
+                            size="small"
 
+                        />}
+                        label="Agree to terms and conditions" className={classes.terms}  {...register("agreeToTerms", { required: true })}
                     />
                     {errors.agreeToTerms && <FormHelperText error >{validation.agreeToTerms.message} </FormHelperText>}
 
                 </Grid>
                 <FormBtn>Sign up</FormBtn>
-                <Grid container justifyContent="flex-end">
+                <Grid container justifyContent="center">
                     <Grid item sx={{ mt: 1 }}>
                         <Link href="/login" variant="body2">
                             Already have an account? Sign in

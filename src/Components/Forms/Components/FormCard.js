@@ -1,10 +1,10 @@
 import { Card } from '@mui/material'
-import '../Styles/FormCard.module.css'
+import classes from '../Styles/FormCard.module.css'
 
 const FormCard = ({ children }) => {
 
     return <>
-        <Card>
+        <Card className={classes.card}>
             {children}
         </Card>
     </>

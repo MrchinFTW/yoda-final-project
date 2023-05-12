@@ -1,24 +1,35 @@
 import React from "react"
 import FormContainer from "../../Components/FormContainer"
 import FormTitle from "../../Components/FormTitle"
-
 import LoginForm from "./LoginForm"
 import { ThemeProvider } from '@mui/material/styles'
 import { theme } from '../.././Styles/theme'
+import FormCard from "../../Components/FormCard"
+import FormImg from "../../Components/FormImg"
 
 
 const LoginContainer = () => {
-    const title = 'Log in'
-    const subtitle = 'Please enter your email and password'
+
+    const loginConfig = {
+        title: 'Log In',
+        img: {
+            src: '/Assets/Login.jpg',
+            alt: 'lady in office'
+        }
+    }
+
 
     return <>
         <ThemeProvider theme={theme}>
-            <FormContainer>
-                <FormTitle >
-                    {title}
-                </FormTitle >
-                <LoginForm />
-            </FormContainer>
+            <FormCard>
+                <FormContainer>
+                    <FormTitle >
+                        {loginConfig.title}
+                    </FormTitle >
+                    <LoginForm />
+                </FormContainer>
+                <FormImg src={loginConfig.img.src} alt={loginConfig.img.alt} />
+            </FormCard>
         </ThemeProvider>
     </>
 }

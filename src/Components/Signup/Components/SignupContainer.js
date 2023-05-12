@@ -6,17 +6,22 @@ import { ThemeProvider } from '@mui/material/styles'
 import { theme } from '../../Forms/Styles/theme'
 import Navbar from '../../Navbar/Components/Navbar'
 import FormImg from '../../Forms/Components/FormImg'
+import FormCard from '../../Forms/Components/FormCard'
+import '../../Forms/Styles/PageStyle.module.css'
 
 
 
 
 
 function SignupContainer() {
-    const title = "Sign up"
-    const img = {
-        src: '.././Assets/Suits.jpg',
-        alt: "suits cover pic"
 
+    const signupConfig = {
+        title: "Sign Up",
+        img: {
+            src: '/Assets/Signup.jpg',
+            alt: "suits cover pic",
+                  },
+     
     }
 
 
@@ -24,14 +29,16 @@ function SignupContainer() {
     return (
         <>
             <ThemeProvider theme={theme}>
-            <Navbar />
-                <FormContainer>
-                    <FormTitle>
-                        {title}
-                    </FormTitle>
-                    <SignupForm />
-                </FormContainer>
-                {/* <FormImg src={img.src} alt={img.alt} /> */}
+                {/* <Navbar /> */}
+                <FormCard>
+                    <FormContainer>
+                        <FormTitle>
+                            {signupConfig.title}
+                        </FormTitle>
+                        <SignupForm />
+                    </FormContainer>
+                    <FormImg src={signupConfig.img.src} alt={signupConfig.img.alt}/>
+                </FormCard>
             </ThemeProvider>
         </>
     )

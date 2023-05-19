@@ -16,12 +16,11 @@ import '../../Forms/Styles/PageStyle.module.css'
 function SignupContainer() {
 
     const signupConfig = {
-        title: "Sign Up",
+        title: "Sign up",
         img: {
-            src: '/Assets/Signup.jpg',
-            alt: "suits cover pic",
-                  },
-     
+            src: '/Assets/Cover.jpg',
+            alt: "cover pic",
+        },
     }
 
 
@@ -29,7 +28,7 @@ function SignupContainer() {
     return (
         <>
             <ThemeProvider theme={theme}>
-                {/* <Navbar /> */}
+                <Navbar />
                 <FormCard>
                     <FormContainer>
                         <FormTitle>
@@ -37,7 +36,7 @@ function SignupContainer() {
                         </FormTitle>
                         <SignupForm />
                     </FormContainer>
-                    <FormImg src={signupConfig.img.src} alt={signupConfig.img.alt}/>
+                    <FormImg src={signupConfig.img.src} alt={signupConfig.img.alt} />
                 </FormCard>
             </ThemeProvider>
         </>

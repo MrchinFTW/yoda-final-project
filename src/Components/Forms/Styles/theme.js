@@ -11,7 +11,8 @@ export const theme = createTheme({
             light: grey[500],
         },
         secondary: {
-            main: grey[600],
+
+            main: '#ffffff',
         },
     },
     typography: {

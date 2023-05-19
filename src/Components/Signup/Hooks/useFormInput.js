@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import {validation} from "../.././Forms/Components/FormValidation"
 
 
 const useFormInput = () => {
@@ -48,8 +49,7 @@ const useFormInput = () => {
 
                 setError("email", {
                     type: "manual",
-                    message: "Email already exists."
-
+                    message: validation.email.exists
                 })
             } else {
 

@@ -4,16 +4,22 @@ export const validation = {
         minLength: {
             value: 2,
             message: "Name too short.",
-        }
-
+        },
+        pattern: {
+            value: /^[A-Za-z]+$/,
+            message: "Please enter a valid name.",
+        },
     },
     lastName: {
         required: "This field is required",
         minLength: {
             value: 2,
             message: "Last name too short.",
-        }
-
+        },
+        pattern: {
+            value: /^[A-Za-z]+$/,
+            message: "Please enter a valid last name.",
+        },
     },
     email: {
         required: "This field is required",
@@ -21,18 +27,9 @@ export const validation = {
             message: "Please enter a valid email address",
             value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
         },
-        notFound: "Sorry, we couldn't find your email address. Please signup to create an account."
+        notFound: "Sorry, we couldn't find your email address. Please signup to create an account.",
+        exists: "Email already registered. Please try a different email or login"
     },
-    // phoneNumber: {
-    //     required: "This field is required",
-    //     minLength: {
-    //         value: 10,
-    //         message: "Please enter a valid phone number"
-    //     }
-    // },
-    // city: {
-    //     required: "This field is required"
-    // },
     password: {
         required: "This field is required",
         pattern: {

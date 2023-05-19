@@ -17,7 +17,6 @@ const LoginForm = () => {
         <>
             <Box component="form" onSubmit={handleSubmit(onSubmit, onError)}>
                 <Grid container spacing={3}>
-
                     <Grid item xs={12}>
                         <TextField
                             noValidate
@@ -73,7 +72,7 @@ const LoginForm = () => {
                     <FormBtn>Log in</FormBtn>
                     <Grid container justifyContent="center">
                         <Grid item sx={{ mt: 1 }}>
-                            <Link href="/login" variant="body2">
+                            <Link href="/signup" variant="body2">
                                 Don't have an account? Sign up
                             </Link>
                         </Grid>

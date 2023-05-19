@@ -18,7 +18,7 @@ function App() {
 
 			<QueryClientProvider client={queryClient}>
 				<div className='App'>
-					<HomeLayout>
+					{/* <HomeLayout> */}
 						<Routes>
 							<Route path='/' element={<Home />} />
 							<Route path='/login' element={<Login />} />
@@ -27,7 +27,7 @@ function App() {
 							<Route path='/signup' element={<SignupForm />} />
 
 						</Routes>
-					</HomeLayout>
+					{/* </HomeLayout> */}
 				</div>
 			</QueryClientProvider>
 

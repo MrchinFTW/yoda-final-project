@@ -1,14 +1,15 @@
-import { Container, Paper, CssBaseline } from "@mui/material"
+import { Container, CssBaseline } from "@mui/material"
 import classes from '../Styles/FormContainer.module.css'
+import { Box } from "@mui/system"
 
 
 const FormContainer = ({ children, className }) => {
     return <>
-        <Container component="main" maxWidth="xs" className="container" sx={{ margin: 0 }}>
+        <Container component="main" maxWidth="xs" className="container" >
             <CssBaseline />
-            <div className={`${classes.paper} ${className}`}>
+            <Box className={`${classes.paper} ${className}`}>
                 {children}
-            </div>
+            </Box>
 
         </Container>
     </>

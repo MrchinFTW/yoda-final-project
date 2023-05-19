@@ -8,12 +8,13 @@ import FormCard from "../../Components/FormCard"
 import FormImg from "../../Components/FormImg"
 
 
+
 const LoginContainer = () => {
 
     const loginConfig = {
         title: 'Log In',
         img: {
-            src: '/Assets/Login.jpg',
+            src: '/Assets/Cover.jpg',
             alt: 'lady in office'
         }
     }

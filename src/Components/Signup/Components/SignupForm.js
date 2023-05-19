@@ -37,7 +37,6 @@ const SignupForm = () => {
                     <TextField
                         noValidate
                         id="firstName"
-
                         name="firstName"
                         label="First name"
                         fullWidth
@@ -49,6 +48,10 @@ const SignupForm = () => {
                                 value: validation.firstName.minLength.value,
                                 message: validation.firstName.minLength.message
                             },
+                            pattern: {
+                                value: validation.firstName.pattern.value,
+                                message: validation.firstName.pattern.message
+                            }
                         }
                         )}
                         error={errors.firstName ? true : false}
@@ -59,7 +62,6 @@ const SignupForm = () => {
                 <Grid item xs={12} sm={6}>
                     <TextField
                         noValidate
-
                         id="lastName"
                         name="lastName"
                         label="Last name"
@@ -72,6 +74,10 @@ const SignupForm = () => {
                                 value: validation.lastName.minLength.value,
                                 message: validation.lastName.minLength.message
                             },
+                            pattern: {
+                                value: validation.lastName.pattern.value,
+                                message: validation.lastName.pattern.message
+                            }
                         }
                         )}
                         error={errors.lastName ? true : false}
@@ -83,7 +89,6 @@ const SignupForm = () => {
                     <TextField
                         noValidate
                         id="email"
-
                         name="email"
                         label="Email address"
                         fullWidth

@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Checkbox, FormControlLabel, FormHelperText, Grid, IconButton, InputAdornment, TextField, Link } from '@mui/material'
 import { Visibility, VisibilityOff } from '@mui/icons-material'
 import FormBtn from '../../Forms/Components/FormBtn'
-import useFormInput from '../Hooks/useFormInput'
+import useFormInput from '../Hooks/useSignupForm'
 import { validation } from '../../Forms/Components/FormValidation'
 import classes from "../Styles/SignupForm.module.css"
 

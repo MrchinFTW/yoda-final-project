@@ -1,9 +1,9 @@
-import { useState } from 'react'
+`import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import {validation} from "../.././Forms/Components/FormValidation"
+import { validation } from "../../Forms/Components/FormValidation"
+import axios from 'axios'
 
-
-const useFormInput = () => {
+const useSignupForm = () => {
     const { register, handleSubmit, watch, reset, formState: { errors }, setError } = useForm()
 
     const [showPassword, setShowPassword] = useState(false)
@@ -33,35 +33,39 @@ const useFormInput = () => {
     }
 
     const onSubmit = (data) => {
-        const signupUrl = 'http://localhost:999/signup'
+        const signupUrl = 'http://localhost:3001/api/signup'
 
-        fetch(signupUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+        axios.post(signupUrl, data, )
+            .then(response => {
+                console.log(response.data)
+                const token = response.data.data.token
+                localStorage.setItem('token', token)
+            })
+            .catch(error => {
+                if (error.response) {
+                    const status = error.response.status
 
-            body: JSON.stringify(data)
+                    if (status === 409) {
+                        setError("email", {
+                            type: "manual",
+                            message: validation.email.exists
+                        })
+                    } else if (status === 422 || status === 500) {
 
-        }).then(response => {
+                        setError("agreeToTerms", {
+                            type: "manual",
+                            message: validation.agreeToTerms.general
+                        })
+                    }
+                } else {
+                    console.log("signed up")
+                    reset()
+                }
+            })
 
-            if (response.status === 409) {
 
-                setError("email", {
-                    type: "manual",
-                    message: validation.email.exists
-                })
-            } else {
-
-                console.log(response)
-                reset()
-            }
-        })
     }
 
-    const onError = () => {
-        console.log('error')
-    }
 
     return {
         register,
@@ -79,8 +83,7 @@ const useFormInput = () => {
         handleMouseDownConfirmPassword,
         handleCheckbox,
         onSubmit,
-        onError
     }
 }
 
-export default useFormInput
+export default useSignupForm

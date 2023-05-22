@@ -47,6 +47,7 @@ export const validation = {
         validate: "Passwords do not match"
     },
     agreeToTerms: {
-        message: "You must agree to the turms & coditions "
+        message: "You must agree to the turms & coditions ",
+        general : "Opps! seems like something went wrong"
     }
 }

@@ -5,13 +5,10 @@ import useUserContext from "../../../../Context/UserContext"
 import { validation } from '../../Components/FormValidation'
 
 
-
-
-
 const useLoginForm = () => {
 
     const { register, handleSubmit, reset, formState: { errors }, setError } = useForm()
-    const { userInfo } = useUserContext()
+    const { userInfo, isLoggedin } = useUserContext()
     const [showPassword, setShowPassword] = useState(false)
     const loginUrl = 'http://localhost:999/login'
 

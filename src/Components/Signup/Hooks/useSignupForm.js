@@ -1,4 +1,4 @@
-`import { useState } from 'react'
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { validation } from "../../Forms/Components/FormValidation"
 import axios from 'axios'
@@ -35,7 +35,7 @@ const useSignupForm = () => {
     const onSubmit = (data) => {
         const signupUrl = 'http://localhost:3001/api/signup'
 
-        axios.post(signupUrl, data, )
+        axios.post(signupUrl, data,)
             .then(response => {
                 console.log(response.data)
                 const token = response.data.data.token

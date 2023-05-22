@@ -7,10 +7,9 @@ const FormContainer = ({ children, className }) => {
     return <>
         <Container component="main" maxWidth="xs" className="container" >
             <CssBaseline />
-            <Box className={`${classes.paper} ${className}`}>
-                {children}
-            </Box>
-
+            {/* <Box className={`${classes.paper} ${className}`}> */}
+            {children}
+            {/* </Box> */}
         </Container>
     </>
 

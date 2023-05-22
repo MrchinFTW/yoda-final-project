@@ -31,7 +31,7 @@ const SignupForm = () => {
 
 
     return <>
-        <Box component="form" onSubmit={handleSubmit(onSubmit, onError)}>
+        <Box component="form" onSubmit={handleSubmit(onSubmit)} >
             <Grid container spacing={2} >
                 <Grid item xs={12} sm={6} >
                     <TextField

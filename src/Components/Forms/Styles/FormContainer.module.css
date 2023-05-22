@@ -1,14 +1,23 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  background-color: white;
+
+}
+
+/*.container {
   width: 100%;
   display: flex;
   justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100vh; /* Ensure the container covers the full height of the viewport */
-}
+/* align-items: center; Center vertically */
+/* height: 100vh; /* Ensure the container covers the full height of the viewport */
+/* }*/
 
-.paper {
+/* .paper {
   padding: 2rem;
   width: 400px;
   height: 500px;
   box-sizing: border-box;
-}
+} */

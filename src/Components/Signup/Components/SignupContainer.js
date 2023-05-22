@@ -12,7 +12,6 @@ import '../../Forms/Styles/PageStyle.module.css'
 
 
 function SignupContainer() {
-
     const signupConfig = {
         title: "Sign up",
         img: {

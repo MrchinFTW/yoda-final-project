@@ -8,7 +8,6 @@ import classes from "../Styles/SignupForm.module.css"
 
 
 
-
 const SignupForm = () => {
     const {
         register,
@@ -24,7 +23,7 @@ const SignupForm = () => {
         handleMouseDownConfirmPassword,
         handleCheckbox,
         onSubmit,
-        onError
+
     } = useFormInput()
 
 
@@ -56,6 +55,7 @@ const SignupForm = () => {
                         )}
                         error={errors.firstName ? true : false}
                         helperText={errors.firstName?.message}
+
                     />
                 </Grid>
 
@@ -190,7 +190,7 @@ const SignupForm = () => {
                         />}
                         label="Agree to terms and conditions" className={classes.terms}  {...register("agreeToTerms", { required: true })}
                     />
-                    {errors.agreeToTerms && <FormHelperText error >{validation.agreeToTerms.message} </FormHelperText>}
+                    {errors.agreeToTerms && <FormHelperText error className={classes.termsError}><p>{validation.agreeToTerms.message} </p></FormHelperText>}
 
                 </Grid>
                 <FormBtn>Sign up</FormBtn>

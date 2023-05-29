@@ -7,7 +7,7 @@ import { theme } from '../../Forms/Styles/theme'
 import Navbar from '../../Navbar/Components/Navbar'
 import FormImg from '../../Forms/Components/FormImg'
 import FormCard from '../../Forms/Components/FormCard'
-import '../../Forms/Styles/PageStyle.module.css'
+
 
 
 

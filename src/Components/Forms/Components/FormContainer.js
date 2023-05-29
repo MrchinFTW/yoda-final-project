@@ -5,7 +5,7 @@ import { Box } from "@mui/system"
 
 const FormContainer = ({ children, className }) => {
     return <>
-        <Container component="main" maxWidth="xs" className="container" >
+        <Container component="main" maxWidth="xs" className={classes.container}>
             <CssBaseline />
             {/* <Box className={`${classes.paper} ${className}`}> */}
             {children}

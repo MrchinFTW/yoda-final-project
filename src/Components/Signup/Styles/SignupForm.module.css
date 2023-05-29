@@ -1,9 +1,23 @@
 .terms {
+  padding-top: 13px;
   color: rgb(109, 109, 109);
-
-  
 }
 
 .checkbox {
   padding-top: 0 !important;
 }
+
+/* error msg */
+p {
+  position: absolute !important;
+  bottom: -19px !important;
+}
+
+.termsError {
+  position: sticky !important;
+  bottom: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+

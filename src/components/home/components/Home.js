@@ -1,31 +1,23 @@
 import EventCard from "./events/components/EventCard"
 import EventsContainer from "./events/components/EventsContainer"
-import Slider from "react-slick"
+import { useEventCardData } from './events/hooks/useEventCardData'
+import EventCardLoading from "./events/components/EventCardLoading"
+
 const Home = () => {
 
-    const eventData = {
-        id: 5,
-        title: 'hello world',
-        image: '/assets/images/image.jpg',
-        date: '05/09/2023',
-        shortDesc: 'lsujyhf hjsflkjsde  jhlkujlksd ujjk  jslgfs skghsrh ljskl solfu '
-
-    }
-    const onMoreInfoClick = () => { console.log('clicked!!') }
-
-
+    const { isLoading, eventData, onMoreInfoClick } = useEventCardData()
 
     return <>
         <h1>home</h1>
-
         <EventsContainer>
-            <EventCard eventData={eventData} onMoreInfoClick={onMoreInfoClick} />
-            <EventCard eventData={eventData} onMoreInfoClick={onMoreInfoClick} />
-            <EventCard eventData={eventData} onMoreInfoClick={onMoreInfoClick} />
-            <EventCard eventData={eventData} onMoreInfoClick={onMoreInfoClick} />
-            <EventCard eventData={eventData} onMoreInfoClick={onMoreInfoClick} />
+            {!isLoading ?
+                eventData.map((event) => (
+                    <EventCard key={event.id} eventData={event} onMoreInfoClick={onMoreInfoClick} />
+                ))
+                :
+                Array(4).fill().map((_, i) => <EventCardLoading key={i} />)
+            }
         </EventsContainer>
-
     </>
 }
 

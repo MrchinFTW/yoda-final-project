@@ -10,6 +10,7 @@ import CustomButton from '../../../../utils/components/CustomButton'
 import useDateFormat from '../../../../utils/hooks/useDateFormat'
 import { IconButton } from '@mui/material'
 
+
 const EventCard = ({ eventData, onMoreInfoClick }) => {
     const { formatDate } = useDateFormat()
 
@@ -100,17 +101,7 @@ const EventCard = ({ eventData, onMoreInfoClick }) => {
                         </Typography>
 
                     </Box>
-                    <Box>
-                        <Typography
-                            component='div'
-                            sx={{
-                                fontSize: '0.7rem',
-                                lineHeight: '1.3'
-                            }}
-                        >
-                            {eventData.shortDesc}
-                        </Typography>
-                    </Box>
+                    
                 </CardContent>
                 <Box
                     sx={{

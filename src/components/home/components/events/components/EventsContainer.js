@@ -1,28 +1,34 @@
 import Container from '@mui/material/Container'
-
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const EventsContainer = ({ children }) => {
-  
+    const settings = {
+        dots: true,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
 
 
+    }
 
     return (
         <>
-              
             <Container elevation={0} maxWidth="false" sx={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexWrap: 'wrap',
-                gap: '15px',
-                width: '100%',
+                width: '80%',
+                height: '40vh',
                 background: '#FAFAFA',
-                padding: '15px'
+           
+
             }}>
+                <Slider {...settings}>
                     {children}
+                </Slider>
             </Container>
-             
         </>
     )
 }

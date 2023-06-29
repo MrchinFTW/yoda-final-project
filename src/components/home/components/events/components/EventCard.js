@@ -24,20 +24,20 @@ const EventCard = ({ eventData, onMoreInfoClick }) => {
                 flexDirection: 'column',
                 borderRadius: '15px',
                 backgroundColor: 'white',
-                width: '235px'
+                width: '225px'
             }}
         >
             <Card
                 key={eventData.id}
                 sx={{
                     width: '220px',
-                    height: '265px',
+                    height: '300px',
                     borderRadius: '15px',
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                     background: 'transparent',
-                    padding: '15px',
+                    padding: '10px',
                 }}
                 elevation={0}
             >
@@ -78,7 +78,6 @@ const EventCard = ({ eventData, onMoreInfoClick }) => {
                                 component='div'
                                 variant="body2"
                                 sx={{
-                                    fontSize: '0.65rem',
                                     lineHeight: '2.5',
                                     fontWeight: '300'
                                 }}
@@ -92,16 +91,14 @@ const EventCard = ({ eventData, onMoreInfoClick }) => {
                         <Typography
                             component='h3'
                             sx={{
-                                fontSize: '0.9rem',
                                 textTransform: 'capitalize',
                                 lineHeight: '1.3'
                             }}
                         >
                             {eventData.title}
                         </Typography>
-
                     </Box>
-                    
+
                 </CardContent>
                 <Box
                     sx={{
@@ -121,8 +118,8 @@ const EventCard = ({ eventData, onMoreInfoClick }) => {
                         type='button'
                         onClick={() => onMoreInfoClick(eventData)}
                         sx={{
-                            width: '90px',
-                            fontSize: '0.7rem',
+                            width: '70px',
+
                             borderRadius: '30px'
                         }}
                     >

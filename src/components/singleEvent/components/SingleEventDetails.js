@@ -14,7 +14,7 @@ const SingleEventDetails = ({ detailsData }) => {
                         <Typography component='h3' sx={{ p: '10px' }} >
                             {detail.title}
                         </Typography>
-                        <Typography component='div' sx={{ whiteSpace: 'wrap', fontSize: '0.8rem', fontWeight: '300', lineHeight: '2', p: '10px' }}>
+                        <Typography component='div' sx={{ whiteSpace: 'wrap',  fontWeight: '300', lineHeight: '2', p: '10px' }}>
                             {detail.description}
                         </Typography>
                     </Box>
@@ -26,11 +26,11 @@ const SingleEventDetails = ({ detailsData }) => {
                         <Typography component='h3' sx={{ pb: '10px' }}>
                             Time & Date
                         </Typography>
-                        <Typography component='div' sx={{ whiteSpace: 'wrap', fontSize: '0.8rem', fontWeight: '300', lineHeight: '2' }}>
+                        <Typography component='div' sx={{ whiteSpace: 'wrap', fontWeight: '300', lineHeight: '2' }}>
                             {formatDate(date)}
                             {/* Tuesday, June 20, 2023 at 6:00 PM */}
                         </Typography>
-                        <Typography component='div' sx={{ whiteSpace: 'wrap', fontSize: '0.8rem', fontWeight: '300', lineHeight: '2' }}>
+                        <Typography component='div' sx={{ whiteSpace: 'wrap', fontWeight: '300', lineHeight: '2' }}>
                             {time}
                             {/* Tuesday, June 20, 2023 at 6:00 PM */}
                         </Typography>
@@ -40,7 +40,7 @@ const SingleEventDetails = ({ detailsData }) => {
                         <Typography component='h3' sx={{ pb: '10px' }} >
                             Location
                         </Typography>
-                        <Typography component='div' sx={{ whiteSpace: 'wrap', fontSize: '0.8rem', fontWeight: '300', lineHeight: '2' }}>
+                        <Typography component='div' sx={{ whiteSpace: 'wrap',  fontWeight: '300', lineHeight: '2' }}>
                             {location}
                         </Typography>
                         <Box >

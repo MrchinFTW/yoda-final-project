@@ -22,18 +22,17 @@ const SingleEventFooter = ({ footerData }) => {
             <Container maxWidth="xl">
                 <Toolbar
                     disableGutters
-                    sx={{ display: "flex", justifyContent: "space-between", margin: '0 auto', padding: '20px 0', width: '90%'}}
+                    sx={{ display: "flex", justifyContent: "space-between", margin: '0 auto', padding: '20px 0', width: '90%' }}
 
                 >
                     <Box>
-                        <Typography variant="h3" component="div" sx={{ fontSize: '1.2rem', textTransform: 'capitalize', color: 'black' }}>
+                        <Typography variant="h4" component="div" sx={{ textTransform: 'capitalize', color: 'primary.main' }}>
                             {title}
                         </Typography>
                     </Box>
                     <Box sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
                         <CustomButton type="button" sx={{
                             width: '90px',
-                            fontSize: '1rem',
                             borderRadius: '30px',
                             padding: '10px 60px'
                         }} onClick={() => handleOnClick(userId)}>

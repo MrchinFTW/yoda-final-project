@@ -61,10 +61,10 @@ const SingleEventHeader = ({ headerData }) => {
                     <Typography variant="h4" component="div" sx={{ pb: '10px', textTransform: 'uppercase' }}>
                         {title}
                     </Typography>
-                    <Typography variant="h6" component="div" sx={{ fontSize: '0.8rem', fontWeight: 'thin' }}>
+                    <Typography variant="h6" component="div" sx={{ fontWeight: 'thin' }}>
                         {host}
                     </Typography>
-                    <Typography variant="subtitle1" component="div" sx={{ fontSize: '0.8rem', fontWeight: 'thin' }} >
+                    <Typography variant="subtitle1" component="div" sx={{ fontWeight: 'thin' }} >
                         {shortDesc}
                     </Typography>
                 </Box>

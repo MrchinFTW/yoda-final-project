@@ -24,14 +24,14 @@ const EventCard = ({ eventData, onMoreInfoClick }) => {
                 flexDirection: 'column',
                 borderRadius: '15px',
                 backgroundColor: 'white',
-                width: '280px'
+                width: '235px'
             }}
         >
             <Card
                 key={eventData.id}
                 sx={{
-                    width: '250px',
-                    height: '280px',
+                    width: '220px',
+                    height: '265px',
                     borderRadius: '15px',
                     display: 'flex',
                     flexDirection: 'column',
@@ -49,7 +49,7 @@ const EventCard = ({ eventData, onMoreInfoClick }) => {
                         width: '100%',
                         height: '150px',
                         objectFit: 'cover',
-                        borderRadius: '20px'
+                        borderRadius: '15px'
                     }}
                 />
                 <CardContent

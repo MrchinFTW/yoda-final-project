@@ -9,6 +9,7 @@ import Home from './components/home/components/Home'
 import Sidebar from './components/sidebar/components/Sidebar'
 import Favorites from './components/sidebar/components/Favorites'
 import MyEvents from './components/sidebar/components/MyEvents'
+import SingleEvent from './components/singleEvent/components/SingleEvent'
 
 const queryClient = new QueryClient()
 
@@ -25,6 +26,7 @@ function App() {
                 <Route path='/home' element={<Home />} />
                 <Route path='/favorites' element={<Favorites />} />
                 <Route path='/my-events' element={<MyEvents />} />
+                <Route path='/events/:id' element={<SingleEvent />} />
               </Routes>
             </Router>
           </div>
